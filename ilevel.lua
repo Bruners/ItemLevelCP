@@ -37,10 +37,10 @@ function frame:OnEvent(event, arg1)
 				local str = fontstrings[slot]
 				str:SetTextColor(R,G,B)
 				str:SetText(string.format("%s", ilevel))
-			else
-				local str = rawget(fontstrings, slot)
-				if str then str:SetText(nil) end
 			end
+		else
+			local str = rawget(fontstrings, slot)
+			if str then str:SetText(nil) end
 		end
 	end
 end
@@ -49,3 +49,4 @@ end
 frame:SetScript("OnEvent", frame.OnEvent)
 frame:RegisterEvent("ADDON_LOADED")
 frame:RegisterEvent("UNIT_INVENTORY_CHANGED")
+frame:RegisterEvent("UPDATE_INVENTORY_DURABILITY")
