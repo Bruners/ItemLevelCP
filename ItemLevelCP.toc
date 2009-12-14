@@ -1,0 +1,8 @@
+## Interface: 30300
+## Title: ItemLevelCP
+## Author: Bruners
+## X-email: bruners@gmail.com
+## Version: v1.0
+## Notes: Shows item level in the character pane
+
+ilevel.lua
