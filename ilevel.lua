@@ -1,7 +1,7 @@
 
 local SLOTIDS, FONTSIZE = {}, 12
 local R,G,B = 1,1,1
-for _,slot in pairs({"Head", "Neck", "Shoulder", "Back", "Chest", "Shirt", "Tabard", "Wrist", "Hands", "Waist", "Legs", "Feet", "Finger0", "Finger1", "Trinket0", "Trinket1", "MainHand", "SecondaryHand", "Ranged"}) do SLOTIDS[slot] = GetInventorySlotInfo(slot .. "Slot") end
+for _,slot in pairs({"Head", "Neck", "Shoulder", "Back", "Chest", "Wrist", "Hands", "Waist", "Legs", "Feet", "Finger0", "Finger1", "Trinket0", "Trinket1", "MainHand", "SecondaryHand", "Ranged"}) do SLOTIDS[slot] = GetInventorySlotInfo(slot .. "Slot") end
 local frame = CreateFrame("Frame", nil, CharacterFrame)
 
 local fontstrings = setmetatable({}, {
@@ -49,4 +49,3 @@ end
 frame:SetScript("OnEvent", frame.OnEvent)
 frame:RegisterEvent("ADDON_LOADED")
 frame:RegisterEvent("UNIT_INVENTORY_CHANGED")
-frame:RegisterEvent("UPDATE_INVENTORY_DURABILITY")
