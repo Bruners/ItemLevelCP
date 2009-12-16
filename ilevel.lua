@@ -21,7 +21,7 @@ local fontstrings = setmetatable({}, {
 function frame:OnEvent(event, arg1)
 	if event == "ADDON_LOADED" and arg1:lower() ~= "itemlevelcp" then
 		for i,fstr in pairs(fontstrings) do
-
+			-- Re-apply the font, so that we catch any changes to NumberFontNormal by addons like ClearFont
 			local font, _, flags = NumberFontNormal:GetFont()
 			fstr:SetFont(font, FONTSIZE, flags)
 		end
